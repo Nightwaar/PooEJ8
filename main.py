@@ -1,20 +1,20 @@
-from clase import conjunto
-if __name__=='__main__':
-    listaA=conjunto()
-    listaB=conjunto()
-    listaC=conjunto()
-    for i in 5:
-        carga = int(input("Ingrese numero a cargar"))
-        listaA[i]=carga
-    for i in 5:
-        carga = int(input("Ingrese numero a cargar"))
-        listaB[i]=carga
-    
-    for i in range(len(listaA)):
-        if listaA[i]!=listaB[i]:
-            listaC[i]+=listaA[i]
-    for i in range(len(listaA)):
-        if listaA[i]!=listaB[i]:
-            listaC[i]+=listaB[i]
-    for i in range(len(listaC)):
-        print(listaC[i])        
+from clase import Conjunto
+
+if __name__ == '__main__':
+	a=Conjunto([1,2,3,4])
+	b=Conjunto([3,6,9])
+	print(a+b)
+	c=Conjunto([1,2,3,4])
+	d=Conjunto([3,6,9])
+	print(c-d)
+	distinto1=Conjunto([1,2,3])
+	distinto2=Conjunto([1,2,4])
+	iguala1=Conjunto([1,2,3])
+	if distinto2==distinto1:
+		print("Conjuntos iguales")
+	else:
+		print("Conjuntos distintos")
+	if distinto1==iguala1:
+		print("Conjuntos iguales")
+	else:
+		print("Conjuntos distintos")
